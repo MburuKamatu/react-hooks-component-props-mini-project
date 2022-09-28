@@ -12,4 +12,41 @@ function App() {
   );
 }
 
+function Header(prop){
+  return(
+    <header>
+    <h1>{prop.name}</h1>
+    </header>
+  )
+}
+
+function About({image="https://via.placeholder.com/215 (Links to an external site.)", about}){
+  return(
+    <aside>
+      <img src={image} alt="blog logo"></img>
+      <p>{about}</p>
+    </aside>
+  )
+}
+/*function ArticleList(prop){
+  const colorElements = colors.map((color) => {   
+    return (
+      <main>
+         <li key={article} style={{ color: color }}>
+          {color}
+        </li>
+      </main>
+    );
+  });*/
+
+function Article({title,date="January 1, 1970",preview}){
+  return(
+    <article>
+      <h3>{title}</h3>
+      <small>{date}</small>
+      <p>{preview}</p>
+    </article>
+  )
+}
+  
 export default App;
